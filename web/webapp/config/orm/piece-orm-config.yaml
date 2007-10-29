@@ -1,0 +1,2 @@
+- name: pieceblog
+  dsn: pgsql://pieceblog:pieceblog@localhost/pieceblog

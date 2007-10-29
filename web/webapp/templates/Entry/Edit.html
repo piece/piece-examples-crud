@@ -1,0 +1,16 @@
+<h4 class="date-header">Edit</h4>
+<form name="New" id="New">
+  <input type="hidden" name="{__flowExecutionTicketKey}" value="{__flowExecutionTicket}" id="flowExecutionTicket" />
+  <p class="error" flexy:if="__NewResults.isError(#title#)">{__NewResults.getErrorMessage(#title#)}</p>
+  <p>
+    Title: <input type="text" name="title" id="title" />
+  </p>
+  <p class="error" flexy:if="__NewResults.isError(#content#)">{__NewResults.getErrorMessage(#content#)}</p>
+  <p>
+    Content: <textarea name="content" id="content"></textarea>
+  </p>
+  <p>
+    <input type="submit" name="{__eventNameKey}_ProcessValidateEditFromDisplayEdit" value="Update" />
+    <input type="submit" name="{__eventNameKey}_DisplayDeleteConfirmViaDisplayEditFromDisplayEdit" value="Delete" />
+  </p>
+</form>

@@ -1,0 +1,12 @@
+<h4 class="date-header">Show</h4>
+<p>Title: {entry.title}</p>
+<p>Content: {GLOBALS.displayTextArea(entry.content):h}</p>
+<p>Rdate: {entry.rdate}</p>
+<p>Mdate: {entry.mdate}</p>
+<form name="Show" id="Show">
+  <input type="hidden" name="{__flowExecutionTicketKey}" value="{__flowExecutionTicket}" />
+  <p>
+    <input type="submit" name="{__eventNameKey}_DisplayEditFromDisplayShow" value="Edit" />
+    <input type="submit" name="{__eventNameKey}_DisplayDeleteConfirmViaDisplayShowFromDisplayShow" value="Delete" />
+  </p>
+</form>

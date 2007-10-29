@@ -1,0 +1,2 @@
+- name: update
+  query: UPDATE entry SET title = $title, content = $content, mdate = current_timestamp WHERE id = $id
