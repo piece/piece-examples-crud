@@ -37,21 +37,6 @@
     - name: flowDefinitions
       type: configuration
       value:
-        - name: RegistrationWithNonExclusiveMode
-          file: ../webapp/config/flows/Registration.yaml
-          isExclusive: false
-        - name: RegistrationWithExclusiveMode
-          file: ../webapp/config/flows/Registration.yaml
-          isExclusive: true
-        - name: RegistrationWithExclusiveModeAndAHAH
-          file: ../webapp/config/flows/Registration.yaml
-          isExclusive: true
-        - name: Authentication
-          file: ../webapp/config/flows/Authentication.yaml
-          isExclusive: true
-        - name: ProtectedResource
-          file: ../webapp/config/flows/ProtectedResource.yaml
-          isExclusive: false
         - name: EntryList
           file: ../webapp/config/flows/Entry/List.yaml
           isExclusive: false
