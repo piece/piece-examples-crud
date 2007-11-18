@@ -49,7 +49,7 @@ viewState:
       class: Entry_NewAction
       method: doActivityOnDisplayNewConfirm
     transition:
-      - event: ProcessCreateNewFromDisplayEditConfirm
+      - event: ProcessCreateNewFromDisplayNewConfirm
         nextState: ProcessCreateNew
       - event: DisplayNewFromDisplayNewConfirm
         nextState: DisplayNew
@@ -71,7 +71,7 @@ actionState:
       class: Entry_NewAction
       method: doActivityOnProcessCreateNew
     transition:
-      - event: DisplayNewFinishFromDisplayEditConfirm
+      - event: DisplayNewFinishFromDisplayNewConfirm
         nextState: DisplayNewFinish
 
 # Local Variables:

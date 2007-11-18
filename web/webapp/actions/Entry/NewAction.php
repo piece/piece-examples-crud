@@ -109,7 +109,7 @@ class Entry_NewAction extends Piece_Unity_Service_FlowAction
         $mapper = &Piece_ORM::getMapper('Entry');
         $mapper->insert($this->_entry);
 
-        return 'DisplayNewFinishFromDisplayEditConfirm';
+        return 'DisplayNewFinishFromDisplayNewConfirm';
     }
 
     /**#@-*/
