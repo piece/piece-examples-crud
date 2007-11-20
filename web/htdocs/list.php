@@ -54,9 +54,6 @@ ini_set('session.cookie_path', str_replace('\\', '/', dirname($_SERVER['SCRIPT_N
 session_save_path("$base/sessions");
 
 $unity = &new Piece_Unity("$base/config", "$base/cache");
-$unity->setConfiguration('Dispatcher_Continuation', 'flowName', 'EntryList');
-$unity->setConfiguration('Renderer_Flexy', 'templateDir', "$base/templates/Entry");
-$unity->setConfiguration('Renderer_Flexy', 'compileDir', "$base/compiled-templates/Entry");
 $unity->dispatch();
 
 /*

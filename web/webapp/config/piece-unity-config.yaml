@@ -34,17 +34,23 @@
     - name: cacheDirectory
       type: configuration
       value: ../webapp/cache/flows
-    - name: flowDefinitions
+    - name: useFlowMappings
+      type: configuration
+      value: true
+    - name: configDirectory
+      type: configuration
+      value: ../webapp/config/flows
+    - name: flowMappings
       type: configuration
       value:
-        - name: EntryList
-          file: ../webapp/config/flows/Entry/List.yaml
+        - url: /list.php
+          flowName: Entry_List
           isExclusive: false
-        - name: EntryNew
-          file: ../webapp/config/flows/Entry/New.yaml
+        - url: /new.php
+          flowName: Entry_New
           isExclusive: false
-        - name: EntryEdit
-          file: ../webapp/config/flows/Entry/Edit.yaml
+        - url: /edit.php
+          flowName: Entry_Edit
           isExclusive: false
 
 - name: Dispatcher_Simple
@@ -75,13 +81,13 @@
       value: true
     - name: layoutView
       type: configuration
-      value: Layout
-    - name: layoutDirectory
+      value: Layout_Layout
+    - name: templateDir
       type: configuration
-      value: ../webapp/templates/Layout
-    - name: layoutCompileDirectory
+      value: ../webapp/templates
+    - name: compileDir
       type: configuration
-      value: ../webapp/compiled-templates/Layout
+      value: ../webapp/compiled-templates
 
 - name: Interceptor_Authentication
   point:
@@ -109,6 +115,9 @@
     - name: cacheDirectory
       type: configuration
       value: ../webapp/cache/validations
+    - name: useUnderscoreAsDirectorySeparator
+      type: configuration
+      value: true
 
 - name: Configurator_Proxy
   point:

@@ -85,13 +85,13 @@ class Entry_EditAction extends Piece_Unity_Service_FlowAction
     {
         $flexyElement = &new Piece_Unity_Service_FlexyElement();
         $flexyElement->addForm($this->_flow->getView(), $this->_context->getScriptName());
-        $flexyElement->restoreValues('New', $this->_entry);
+        $flexyElement->restoreValues('Entry_New', $this->_entry);
     }
 
     function doActivityOnProcessValidateEdit()
     {
         $validation = &$this->_context->getValidation();
-        if ($validation->validate('New', $this->_entry)) {
+        if ($validation->validate('Entry_New', $this->_entry)) {
             return 'DisplayEditConfirmFromProcessValidateEdit';
         } else {
             return 'DisplayEditFromProcessValidateEdit';
@@ -140,7 +140,8 @@ class Entry_EditAction extends Piece_Unity_Service_FlowAction
     function doActivityOnProcessUpdate()
     {
         $mapper = &Piece_ORM::getMapper('Entry');
-        if ($mapper->update($this->_entry)) {
+        $affectedRows = $mapper->update($this->_entry);
+        if ($affectedRows) {
             return 'ProcessFindFromProcessUpdate';
         } else {
             return 'DisplayErrorFromProcessUpdate';
@@ -150,7 +151,7 @@ class Entry_EditAction extends Piece_Unity_Service_FlowAction
     function doActivityOnProcessValidateID()
     {
         $validation = &$this->_context->getValidation();
-        if ($validation->validate('ID', $this->_entry)) {
+        if ($validation->validate('Entry_ID', $this->_entry)) {
             return 'ProcessFindFromProcessValidateID';
         } else {
             return 'DisplayErrorFromProcessValidateID';
@@ -160,7 +161,8 @@ class Entry_EditAction extends Piece_Unity_Service_FlowAction
     function doActivityOnProcessDelete()
     {
         $mapper = &Piece_ORM::getMapper('Entry');
-        if ($mapper->delete($this->_entry)) {
+        $affectedRows = $mapper->delete($this->_entry);
+        if ($affectedRows) {
             return 'DisplayDeleteFinishFromProcessDelete';
         } else {
             return 'DisplayErrorFromProcessDelete';

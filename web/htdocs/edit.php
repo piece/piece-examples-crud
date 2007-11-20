@@ -54,11 +54,6 @@ ini_set('session.cookie_path', str_replace('\\', '/', dirname($_SERVER['SCRIPT_N
 session_save_path("$base/sessions");
 
 $unity = &new Piece_Unity("$base/config", "$base/cache");
-$unity->setConfiguration('Dispatcher_Continuation', 'flowName', 'EntryEdit');
-$unity->setConfiguration('Renderer_Flexy', 'templateDir', "$base/templates/Entry");
-$unity->setConfiguration('Renderer_Flexy', 'compileDir', "$base/compiled-templates/Entry");
-$unity->setConfiguration('Configurator_Validation', 'configDirectory', "$base/config/validations/Entry");
-$unity->setConfiguration('Configurator_Validation', 'cacheDirectory', "$base/cache/validations/Entry");
 $unity->dispatch();
 
 /*

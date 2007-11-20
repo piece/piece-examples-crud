@@ -71,7 +71,7 @@ actionState:
       class: Entry_NewAction
       method: doActivityOnProcessCreateNew
     transition:
-      - event: DisplayNewFinishFromDisplayNewConfirm
+      - event: DisplayNewFinishFromProcessCreateNew
         nextState: DisplayNewFinish
 
 # Local Variables:

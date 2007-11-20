@@ -82,13 +82,13 @@ class Entry_NewAction extends Piece_Unity_Service_FlowAction
     {
         $flexyElement = &new Piece_Unity_Service_FlexyElement();
         $flexyElement->addForm($this->_flow->getView(), $this->_context->getScriptName());
-        $flexyElement->restoreValues('New', $this->_entry);
+        $flexyElement->restoreValues('Entry_New', $this->_entry);
     }
 
     function doActivityOnProcessValidateNew()
     {
         $validation = &$this->_context->getValidation();
-        if ($validation->validate('New', $this->_entry)) {
+        if ($validation->validate('Entry_New', $this->_entry)) {
             return 'DisplayNewConfirmFromProcessValidateNew';
         } else {
             return 'DisplayNewFromProcessValidateNew';
@@ -109,7 +109,7 @@ class Entry_NewAction extends Piece_Unity_Service_FlowAction
         $mapper = &Piece_ORM::getMapper('Entry');
         $mapper->insert($this->_entry);
 
-        return 'DisplayNewFinishFromDisplayNewConfirm';
+        return 'DisplayNewFinishFromProcessCreateNew';
     }
 
     /**#@-*/
