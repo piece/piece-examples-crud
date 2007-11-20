@@ -37,9 +37,9 @@
 
 error_reporting(E_ALL);
 
-if (file_exists(dirname(__FILE__) . '/../../imports')) {
-    set_include_path(dirname(__FILE__) . '/../../imports/spyc-0.2.5' . PATH_SEPARATOR .
-                     dirname(__FILE__) . '/../../imports/pear'
+if (file_exists(dirname(__FILE__) . '/../../../imports')) {
+    set_include_path(dirname(__FILE__) . '/../../../imports/spyc-0.2.5' . PATH_SEPARATOR .
+                     dirname(__FILE__) . '/../../../imports/pear'
                      );
 }
 
@@ -48,12 +48,13 @@ require_once 'Piece/Unity/Error.php';
 
 Piece_Unity_Error::pushCallback(create_function('$error', 'var_dump($error); return ' . PEAR_ERRORSTACK_DIE . ';'));
 
-$base = dirname(__FILE__) . '/../webapp';
+$base = dirname(__FILE__) . '/../../webapp';
 
 ini_set('session.cookie_path', str_replace('\\', '/', dirname($_SERVER['SCRIPT_NAME'])));
 session_save_path("$base/sessions");
 
 $unity = &new Piece_Unity("$base/config", "$base/cache");
+$unity->setConfiguration('Configurator_AppRoot', 'appRoot', dirname(__FILE__) . '/..');
 $unity->dispatch();
 
 /*

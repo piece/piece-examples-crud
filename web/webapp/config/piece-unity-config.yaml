@@ -43,13 +43,13 @@
     - name: flowMappings
       type: configuration
       value:
-        - url: /list.php
+        - url: /entry/list.php
           flowName: Entry_List
           isExclusive: false
-        - url: /new.php
+        - url: /entry/new.php
           flowName: Entry_New
           isExclusive: false
-        - url: /edit.php
+        - url: /entry/edit.php
           flowName: Entry_Edit
           isExclusive: false
 

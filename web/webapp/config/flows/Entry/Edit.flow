@@ -30,7 +30,7 @@ firstState: ProcessValidateID
 
 lastState:
   name: DisplayDeleteFinish
-  view: http://example.org/list.php
+  view: http://example.org/entry/list.php
 
 viewState:
 
