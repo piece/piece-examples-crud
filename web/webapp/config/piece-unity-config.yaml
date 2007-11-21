@@ -53,12 +53,6 @@
           flowName: Entry_Edit
           isExclusive: false
 
-- name: Dispatcher_Simple
-  point:
-    - name: actionDirectory
-      type: configuration
-      value: ../webapp/actions
-
 - name: View
   point:
     - name: renderer
@@ -72,7 +66,6 @@
       value:
         - Interceptor_NullByteAttackPreventation
         - Interceptor_SessionStart
-        - Interceptor_Authentication
 
 - name: Renderer_Flexy
   point:
@@ -88,24 +81,6 @@
     - name: compileDir
       type: configuration
       value: ../webapp/compiled-templates
-
-- name: Interceptor_Authentication
-  point:
-    - name: services
-      type: configuration
-      value:
-        - name: Example
-          guard:
-            class: AuthenticationAction
-            method: isAuthenticated
-          url: "http://example.org/basics/authenticate.php"
-          resources:
-            - /protected-resource.php
-          useCallback: true
-          callbackKey: callback
-    - name: guardDirectory
-      type: configuration
-      value: ../webapp/actions
 
 - name: Configurator_Validation
   point:
@@ -123,7 +98,7 @@
   point:
     - name: proxyPath
       type: configuration
-      value: /basics
+      value: /crud
 
 - name: ConfiguratorChain
   point:
