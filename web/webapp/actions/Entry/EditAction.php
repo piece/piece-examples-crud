@@ -37,6 +37,8 @@
 
 require_once 'Piece/Unity/Service/FlowAction.php';
 require_once 'Piece/Unity/Service/FlexyElement.php';
+require_once 'Piece/ORM.php';
+require_once 'Piece/ORM/Error.php';
 
 // {{{ Entry_EditAction
 
@@ -128,6 +130,10 @@ class Entry_EditAction extends Piece_Unity_Service_FlowAction
     function doActivityOnProcessFind()
     {
         $mapper = &Piece_ORM::getMapper('Entry');
+        if (Piece_ORM_Error::hasErrors('exception')) {
+            return;
+        }
+
         $entry = &$mapper->findById($this->_entry);
         if (!is_null($entry)) {
             $this->_entry = &$entry;
@@ -140,6 +146,10 @@ class Entry_EditAction extends Piece_Unity_Service_FlowAction
     function doActivityOnProcessUpdate()
     {
         $mapper = &Piece_ORM::getMapper('Entry');
+        if (Piece_ORM_Error::hasErrors('exception')) {
+            return;
+        }
+
         $affectedRows = $mapper->update($this->_entry);
         if ($affectedRows) {
             return 'ProcessFindFromProcessUpdate';
@@ -161,6 +171,10 @@ class Entry_EditAction extends Piece_Unity_Service_FlowAction
     function doActivityOnProcessDelete()
     {
         $mapper = &Piece_ORM::getMapper('Entry');
+        if (Piece_ORM_Error::hasErrors('exception')) {
+            return;
+        }
+
         $affectedRows = $mapper->delete($this->_entry);
         if ($affectedRows) {
             return 'DisplayDeleteFinishFromProcessDelete';

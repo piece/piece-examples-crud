@@ -38,6 +38,7 @@
 require_once 'Piece/Unity/Service/FlowAction.php';
 require_once 'Piece/Unity/Service/FlexyElement.php';
 require_once 'Piece/ORM.php';
+require_once 'Piece/ORM/Error.php';
 
 // {{{ Entry_NewAction
 
@@ -107,6 +108,10 @@ class Entry_NewAction extends Piece_Unity_Service_FlowAction
     function doActivityOnProcessCreateNew()
     {
         $mapper = &Piece_ORM::getMapper('Entry');
+        if (Piece_ORM_Error::hasErrors('exception')) {
+            return;
+        }
+
         $mapper->insert($this->_entry);
 
         return 'DisplayNewFinishFromProcessCreateNew';

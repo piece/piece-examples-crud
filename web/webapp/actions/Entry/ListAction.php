@@ -38,6 +38,7 @@
 require_once 'Piece/Unity/Service/FlowAction.php';
 require_once 'Piece/Unity/Service/FlexyElement.php';
 require_once 'Piece/ORM.php';
+require_once 'Piece/ORM/Error.php';
 
 // {{{ Entry_ListAction
 
@@ -82,6 +83,10 @@ class Entry_ListAction extends Piece_Unity_Service_FlowAction
     function doActivityOnProcessFindList()
     {
         $mapper = &Piece_ORM::getMapper('Entry');
+        if (Piece_ORM_Error::hasErrors('exception')) {
+            return;
+        }
+
         $this->_entries = $mapper->findAll();
 
         return 'DisplayListFromProcessFindList';
