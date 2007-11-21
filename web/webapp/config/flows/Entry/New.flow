@@ -30,7 +30,7 @@ firstState: DisplayNew
 
 lastState:
   name: DisplayNewFinish
-  view: http://example.org/entry/list.php
+  view: http://example.org/crud/entry/list.php
 
 viewState:
 
