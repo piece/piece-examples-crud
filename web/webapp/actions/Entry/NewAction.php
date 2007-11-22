@@ -28,7 +28,7 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  * POSSIBILITY OF SUCH DAMAGE.
  *
- * @package    Piece_Unity
+ * @package    Piece_Examples_CRUD
  * @copyright  2007 KUBO Atsuhiro <iteman@users.sourceforge.net>
  * @license    http://www.opensource.org/licenses/bsd-license.php  BSD License (revised)
  * @version    SVN: $Id$
@@ -45,7 +45,7 @@ require_once 'Piece/ORM/Error.php';
 /**
  * Action class for the flow Registration.
  *
- * @package    Piece_Unity
+ * @package    Piece_Examples_CRUD
  * @copyright  2007 KUBO Atsuhiro <iteman@users.sourceforge.net>
  * @license    http://www.opensource.org/licenses/bsd-license.php  BSD License (revised)
  * @version    Release: 1.0.0
