@@ -8,7 +8,6 @@ viewState:
   - name: DisplayNew
     view: New
     activity:
-      class: Entry_NewAction
       method: doActivityOnDisplayNew
     transition:
       - event: ProcessValidateNewFromDisplayNew
@@ -16,7 +15,6 @@ viewState:
   - name: DisplayNewConfirm
     view: NewConfirm
     activity:
-      class: Entry_NewAction
       method: doActivityOnDisplayNewConfirm
     transition:
       - event: ProcessCreateNewFromDisplayNewConfirm
@@ -27,7 +25,6 @@ viewState:
 actionState:
   - name: ProcessValidateNew
     activity:
-      class: Entry_NewAction
       method: doActivityOnProcessValidateNew
     transition:
       - event: DisplayNewConfirmFromProcessValidateNew
@@ -36,7 +33,6 @@ actionState:
         nextState: DisplayNew
   - name: ProcessCreateNew
     activity:
-      class: Entry_NewAction
       method: doActivityOnProcessCreateNew
     transition:
       - event: DisplayNewFinishFromProcessCreateNew

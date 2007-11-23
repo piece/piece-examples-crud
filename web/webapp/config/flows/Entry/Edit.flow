@@ -8,7 +8,6 @@ viewState:
   - name: DisplayShow
     view: Show
     activity:
-      class: Entry_EditAction
       method: doActivityOnDisplayShow
     transition:
       - event: DisplayEditFromDisplayShow
@@ -18,7 +17,6 @@ viewState:
   - name: DisplayEdit
     view: Edit
     activity:
-      class: Entry_EditAction
       method: doActivityOnDisplayEdit
     transition:
       - event: ProcessValidateEditFromDisplayEdit
@@ -28,7 +26,6 @@ viewState:
   - name: DisplayEditConfirm
     view: EditConfirm
     activity:
-      class: Entry_EditAction
       method: doActivityOnDisplayEditConfirm
     transition:
       - event: ProcessUpdateFromDisplayEditConfirm
@@ -38,7 +35,6 @@ viewState:
   - name: DisplayDeleteConfirmViaDisplayShow
     view: DeleteConfirmViaDisplayShow
     activity:
-      class: Entry_EditAction
       method: doActivityOnDisplayDeleteConfirmViaDisplayShow
     transition:
       - event: ProcessDeleteFromDisplayDeleteConfirmViaDisplayShow
@@ -48,7 +44,6 @@ viewState:
   - name: DisplayDeleteConfirmViaDisplayEdit
     view: DeleteConfirmViaDisplayEdit
     activity:
-      class: Entry_EditAction
       method: doActivityOnDisplayDeleteConfirmViaDisplayEdit
     transition:
       - event: ProcessDeleteFromDisplayDeleteConfirmViaDisplayEdit
@@ -61,7 +56,6 @@ viewState:
 actionState:
   - name: ProcessValidateEdit
     activity:
-      class: Entry_EditAction
       method: doActivityOnProcessValidateEdit
     transition:
       - event: DisplayEditConfirmFromProcessValidateEdit
@@ -70,7 +64,6 @@ actionState:
         nextState: DisplayEdit
   - name: ProcessFind
     activity:
-      class: Entry_EditAction
       method: doActivityOnProcessFind
     transition:
       - event: DisplayShowFromProcessFind
@@ -79,7 +72,6 @@ actionState:
         nextState: DisplayError
   - name: ProcessUpdate
     activity:
-      class: Entry_EditAction
       method: doActivityOnProcessUpdate
     transition:
       - event: ProcessFindFromProcessUpdate
@@ -88,7 +80,6 @@ actionState:
         nextState: DisplayError
   - name: ProcessValidateID
     activity:
-      class: Entry_EditAction
       method: doActivityOnProcessValidateID
     transition:
       - event: ProcessFindFromProcessValidateID
@@ -97,7 +88,6 @@ actionState:
         nextState: DisplayError
   - name: ProcessDelete
     activity:
-      class: Entry_EditAction
       method: doActivityOnProcessDelete
     transition:
       - event: DisplayDeleteFinishFromProcessDelete

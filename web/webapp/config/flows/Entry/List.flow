@@ -4,13 +4,11 @@ viewState:
   - name: DisplayList
     view: List
     activity:
-      class: Entry_ListAction
       method: doActivityOnDisplayList
 
 actionState:
   - name: ProcessFindList
     activity:
-      class: Entry_ListAction
       method: doActivityOnProcessFindList
     transition:
       - event: DisplayListFromProcessFindList
