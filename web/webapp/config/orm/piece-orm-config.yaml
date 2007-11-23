@@ -1,2 +1,16 @@
-- name: pieceblog
+# $Id$
+
+- name: pgsql
   dsn: pgsql://pieceblog:pieceblog@localhost/pieceblog
+  directorySuffix: pgsql
+
+- name: mysql
+  dsn: mysql://piece_crud:piece_crud@localhost/piece_crud
+  directorySuffix: mysql
+
+# Local Variables:
+# mode: conf-colon
+# coding: iso-8859-1
+# tab-width: 2
+# indent-tabs-mode: nil
+# End:

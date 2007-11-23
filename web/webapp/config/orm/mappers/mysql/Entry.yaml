@@ -1,0 +1,14 @@
+# $Id$
+
+- name: insert
+  query: INSERT INTO entry (title, content, rdate) VALUES ($title, $content, current_timestamp)
+
+- name: update
+  query: UPDATE entry SET title = $title, content = $content WHERE id = $id
+
+# Local Variables:
+# mode: conf-colon
+# coding: iso-8859-1
+# tab-width: 2
+# indent-tabs-mode: nil
+# End:

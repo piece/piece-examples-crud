@@ -106,6 +106,7 @@
       type: extension
       value:
         - Configurator_PieceORM
+        - Piece_Examples_CRUD_Configurator
 
 - name: Configurator_PieceORM
   point:
@@ -118,6 +119,23 @@
     - name: mapperConfigDirectory
       type: configuration
       value: ../webapp/config/orm/mappers
+
+- name: Piece_Examples_CRUD_Configurator
+  point:
+    - name: databaseBackend
+      type: configuration
+      value: pgsql
+
+- name: Configurator_Plugin
+  point:
+    - name: pluginDirectories
+      type: configuration
+      value:
+        - ../webapp/lib
+    - name: pluginPrefixes
+      type: configuration
+      value:
+        - ""
 
 # Local Variables:
 # mode: conf-colon
