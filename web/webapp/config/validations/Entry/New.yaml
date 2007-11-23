@@ -27,12 +27,26 @@
 ######################################################################
 
 - name: title
+  description: Title
   required:
-    message: title is required
+    message: %_description% is required
+  validator:
+    - name: Length
+      rule:
+        min: 1
+        max: 255
+      message: The length of %_description% must be less than %_max% characters
 
 - name: content
+  description: Content
   required:
-    message: content is required
+    message: %_description% is required
+  validator:
+    - name: Length
+      rule:
+        min: 1
+        max: 8192
+      message: The length of %_description% must be less than %_max% characters
 
 # Local Variables:
 # mode: conf-colon
