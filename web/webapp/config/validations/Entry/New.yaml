@@ -35,7 +35,7 @@
       rule:
         min: 1
         max: 255
-      message: The length of %_description% must be less than %_max% characters
+      message: The length of %_description% must be less than %max% characters
 
 - name: content
   description: Content
@@ -46,7 +46,7 @@
       rule:
         min: 1
         max: 8192
-      message: The length of %_description% must be less than %_max% characters
+      message: The length of %_description% must be less than %max% characters
 
 # Local Variables:
 # mode: conf-colon
