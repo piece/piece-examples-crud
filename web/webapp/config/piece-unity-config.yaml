@@ -124,7 +124,7 @@
   point:
     - name: databaseBackend
       type: configuration
-      value: pgsql
+      value: mysql
 
 - name: Configurator_Plugin
   point:
