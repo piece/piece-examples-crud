@@ -38,8 +38,8 @@
 error_reporting(E_ALL);
 
 if (file_exists(dirname(__FILE__) . '/../../../imports')) {
-    set_include_path(dirname(__FILE__) . '/../../../imports/spyc-0.2.5' . PATH_SEPARATOR .
-                     dirname(__FILE__) . '/../../../imports/pear'
+    set_include_path(dirname(__FILE__) . '/../../../imports/pear' . PATH_SEPARATOR .
+                     dirname(__FILE__) . '/../../../imports/spyc-0.2.5'
                      );
 }
 
