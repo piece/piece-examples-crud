@@ -1,19 +1,22 @@
-/* $Id$ */
+/* -------------------------------------------------------------- 
+   Piece Framework - Application Style Sheet 
+-------------------------------------------------------------- */
+@import 'common.css';
 
 /***************************************************
    HTML Element Styles
  ***************************************************/
-* {
-  margin: 0;
-  padding: 0;
+body {
+  font-size: 87%;
+  color: #333333;
+  font-family: Verdana, Helvetica, Arial, sans-serif;
+  background: #f4f4f4 url(../images/bg.gif) top center repeat-y;
+  margin:0;
 }
 
-body {
-  font-family: Verdana, Helvetica, Arial, sans-serif;
-  text-align: left;
-  color: #333333;
-  font-size: 87%;
-  background: #f4f4f4 url(../images/bg.gif) top center repeat-y;
+h1,h2,h3,h4,h5,h6 { 
+  color: #111; 
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; 
 }
 
 /***************************************************
@@ -24,29 +27,14 @@ body {
   margin: 0 auto;
 }
 
-.hide {
-  display: none;
-}
-
 .clear {
-  clear: both;
   width: 780px;
-  height: 1px;
-  margin: 0;
-  padding: 0;
-}
-
-form {
-  margin: 0;
-  padding: 0;
 }
 
 /***************************************************
   Header Styles
  ***************************************************/
 #header { 
-  float: left;
-  margin: 0 auto;
   background: #eeeeee url(../images/piece_header.jpg) top center no-repeat;
   position: relative;
   width: 780px;
@@ -60,152 +48,104 @@ form {
 }
 
 /***************************************************
-  Content Styles
+  Container Styles
  ***************************************************/
-#content {
-  float: left;
+#container {
   width: 740px;
   margin: 20px 0 20px 20px;
-  padding: 0;
   line-height: 1.5em;
   text-align: left;
 }
 
-#content ol {
+#container ol {
   margin: 0 0 20px 40px;
-  padding: 0;
 }
 
-#content ol li,
-#content ol li a {
-  margin: 0 0 8px 0;
-  padding: 0 0 0 0;
+#container ol li,
+#container ol li a {
   list-style: decimal;
   letter-spacing: 1px;
+  margin-bottom: 8px;
 }
 
 /***************************************************
   Special text formatting 
  ***************************************************/
-#content h1 {
+#container h1 {
   clear: both;
-  font-size: 1.8em;
-  color: #333333;
-  font-weight: bold;
-  margin: 0;
   padding: 5px 0 10px 10px;
 }
 
-#content h2 {
+#container h2 {
   display: inline;
   float: left;
-  font-size: 1.6em;
-  color: #333333;
-  font-weight: bold;
   margin: 0 0 10px 10px;
   padding: 5px 10px;
   border: 1px solid #aaaaaa;
 }
 
-#content h3 {
+#container h3 {
   clear: both;
-  font-size: 1.4em;
-  color: #333333;
-  font-weight: bold;
   margin: 10px 0 0 0;
   padding: 0 0 10px 10px;
 }
 
-#content h4.date-header {
+#container h4 {
   clear: both;
+  color: #660000;
   margin: 0 0 10px 0;
   padding: 0 0 0 18px;
-  font-size: 1.2em;
-  color: #660000;
   letter-spacing: 1px;
   background: url(../images/date_icon.gif) no-repeat 0 15%;
 }
 
-#content p {
-  font-size: 0.9em;
+p {
   margin: 0 0 10px 20px;
 }
 
-#content p.error,
-#content p.notice, 
-#content p.message {
-  padding: .5em;
-  margin-bottom: 1em;
-  border: 2px solid #ddd;
-}
-
-#content p.error {
+p.error {
   background: #FBE3E4;
   color: #D12F19;
   border-color: #FBC2C4;
 }
 
-#content p.notice {
-  background: #FFF6BF;
-  color: #817134;
-  border-color: #FFD324;
-}
-
-#content p.message {
+p.message {
   background: #E6EFC2;
   color: #529214;
   border-color: #C6D880;
 }
 
-#content p.error a {
+p.error a {
   color: #D12F19;
 }
 
-#content p.notice a {
-  color: #817134;
-}
-
-#content p.message a {
+p.message a {
   color: #529214;
 }
 
-#content u {
-  text-decoration: underline;
+
+/***************************************************
+  Form Element Styles
+ ***************************************************/
+input.text {
+  width: 500px;
 }
 
-#content a, a:link { 
-  color: #6699cc;
-  border-bottom: 1px dotted #6699cc;
-  text-decoration: none;
+textarea {
+  width: 500px;
+  height: 50px;
 }
 
-#content a:hover {
-  color: #669933;
-  border-bottom: 1px dotted #669933;
-}
-
-#content a:active {
-  color: #cc3333;
-  border-bottom: 1px dotted #cc3333;
-}
-
-#content a:visited {
-  color: #666699;
-  border-bottom: 1px dotted #666699;
-}
-
-#content a img, img {
-  border: 0;
+select {
+  width: 200px;
 }
 
 /***************************************************
  Footer
  ***************************************************/
 #footer {
-  float: left;
   width: 780px;
-  margin: 0 auto;
-  background: url(../images/piece_footer.jpg) no-repeat bottom left;
+  background: #eeeeee url(../images/piece_footer.jpg) no-repeat top left;
 }
 
 #footer p {
@@ -222,4 +162,3 @@ form {
   color: #660000;
   border-bottom: 1px dotted #330000;
 }
-

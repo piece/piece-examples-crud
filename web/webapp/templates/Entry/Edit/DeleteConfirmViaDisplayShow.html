@@ -1,6 +1,23 @@
 <h4 class="date-header">DeleteConfirmViaDisplayShow</h4>
-<p>Title: {entry.title}</p>
-<p>Content: {GLOBALS.displayTextArea(entry.content):h}</p>
+<fieldset>
+  <legend>Entry</legend>
+  <p>
+    <label for="title">Title: </label><br />
+    <span class="text">{entry.title}</span>
+  </p>
+  <p>
+    <label for="content">Content: </label><br />
+    <span class="text">{GLOBALS.displayTextArea(entry.content):h}</span>
+  </p>
+  <p>
+    <label for="rdate">Rdate: </label><br />
+    <span class="text">{entry.rdate}</span>
+  </p>
+  <p>
+    <label for="rdate">Mdate: </label><br />
+    <span class="text">{entry.mdate}</span>
+  </p>
+</fieldset>
 <form name="DeleteConfirmViaDisplayShow" id="DeleteConfirmViaDisplayShow">
   <input type="hidden" name="{__flowExecutionTicketKey}" value="{__flowExecutionTicket}" />
   <p>
