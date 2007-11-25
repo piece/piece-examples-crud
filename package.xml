@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package packagerversion="1.6.2" version="2.0" xmlns="http://pear.php.net/dtd/package-2.0" xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0
+    http://pear.php.net/dtd/tasks-1.0.xsd
+    http://pear.php.net/dtd/package-2.0
+    http://pear.php.net/dtd/package-2.0.xsd">
+ <name>Piece_Examples_CRUD</name>
+ <channel>pear.piece-framework.com</channel>
+ <summary>A CRUD application with Piece_Unity and Piece_ORM</summary>
+ <description>Piece_Examples_CRUD</description>
+ <lead>
+  <name>KUBO Atsuhiro</name>
+  <user>iteman</user>
+  <email>iteman@users.sourceforge.net</email>
+  <active>yes</active>
+ </lead>
+ <date>2007-11-25</date>
+ <time>23:17:20</time>
+ <version>
+  <release>1.0.0</release>
+  <api>1.0.0</api>
+ </version>
+ <stability>
+  <release>stable</release>
+  <api>stable</api>
+ </stability>
+ <license uri="http://www.opensource.org/licenses/bsd-license.php">BSD License (revised)</license>
+ <notes>The first release of Piece_Examples_CRUD.</notes>
+ <contents>
+  <dir baseinstalldir="/" name="/">
+   <dir name="data">
+    <dir name="schemas">
+     <dir name="mysql">
+      <file name="entry.ddl" role="data">
+       <tasks:replace from="@package_version@" to="version" type="package-info" />
+      </file>
+     </dir> <!-- /data/schemas/mysql -->
+     <dir name="pgsql">
+      <file name="entry.ddl" role="data">
+       <tasks:replace from="@package_version@" to="version" type="package-info" />
+      </file>
+     </dir> <!-- /data/schemas/pgsql -->
+    </dir> <!-- /data/schemas -->
+   </dir> <!-- /data -->
+   <dir name="docs">
+    <file name="LICENSE" role="doc">
+     <tasks:replace from="@package_version@" to="version" type="package-info" />
+    </file>
+   </dir> <!-- /docs -->
+   <dir name="web">
+    <dir name="htdocs">
+     <dir name="css">
+      <file name="application.css" role="data">
+       <tasks:replace from="@package_version@" to="version" type="package-info" />
+      </file>
+      <file name="common.css" role="data">
+       <tasks:replace from="@package_version@" to="version" type="package-info" />
+      </file>
+      <file name="print.css" role="data">
+       <tasks:replace from="@package_version@" to="version" type="package-info" />
+      </file>
+     </dir> <!-- /web/htdocs/css -->
+     <dir name="entry">
+      <file name="edit.php" role="data">
+       <tasks:replace from="@package_version@" to="version" type="package-info" />
+      </file>
+      <file name="list.php" role="data">
+       <tasks:replace from="@package_version@" to="version" type="package-info" />
+      </file>
+      <file name="new.php" role="data">
+       <tasks:replace from="@package_version@" to="version" type="package-info" />
+      </file>
+     </dir> <!-- /web/htdocs/entry -->
+     <dir name="images">
+      <file name="bg.gif" role="data">
+       <tasks:replace from="@package_version@" to="version" type="package-info" />
+      </file>
+      <file name="date_icon.gif" role="data">
+       <tasks:replace from="@package_version@" to="version" type="package-info" />
+      </file>
+      <file name="piece_footer.jpg" role="data">
+       <tasks:replace from="@package_version@" to="version" type="package-info" />
+      </file>
+      <file name="piece_header.jpg" role="data">
+       <tasks:replace from="@package_version@" to="version" type="package-info" />
+      </file>
+      <file name="quotes.gif" role="data">
+       <tasks:replace from="@package_version@" to="version" type="package-info" />
+      </file>
+     </dir> <!-- /web/htdocs/images -->
+    </dir> <!-- /web/htdocs -->
+    <dir name="webapp">
+     <dir name="actions">
+      <dir name="Entry">
+       <file name="EditAction.php" role="data">
+        <tasks:replace from="@package_version@" to="version" type="package-info" />
+       </file>
+       <file name="ListAction.php" role="data">
+        <tasks:replace from="@package_version@" to="version" type="package-info" />
+       </file>
+       <file name="NewAction.php" role="data">
+        <tasks:replace from="@package_version@" to="version" type="package-info" />
+       </file>
+      </dir> <!-- /web/webapp/actions/Entry -->
+     </dir> <!-- /web/webapp/actions -->
+     <dir name="cache">
+      <dir name="flows">
+       <file name="README" role="data">
+        <tasks:replace from="@package_version@" to="version" type="package-info" />
+       </file>
+      </dir> <!-- /web/webapp/cache/flows -->
+      <dir name="orm">
+       <file name="README" role="data">
+        <tasks:replace from="@package_version@" to="version" type="package-info" />
+       </file>
+      </dir> <!-- /web/webapp/cache/orm -->
+      <dir name="validations">
+       <file name="README" role="data">
+        <tasks:replace from="@package_version@" to="version" type="package-info" />
+       </file>
+      </dir> <!-- /web/webapp/cache/validations -->
+      <file name="README" role="data">
+       <tasks:replace from="@package_version@" to="version" type="package-info" />
+      </file>
+     </dir> <!-- /web/webapp/cache -->
+     <dir name="compiled-templates">
+      <file name="README" role="data">
+       <tasks:replace from="@package_version@" to="version" type="package-info" />
+      </file>
+     </dir> <!-- /web/webapp/compiled-templates -->
+     <dir name="config">
+      <dir name="flows">
+       <dir name="Entry">
+        <file name="Edit.flow" role="data">
+         <tasks:replace from="@package_version@" to="version" type="package-info" />
+        </file>
+        <file name="List.flow" role="data">
+         <tasks:replace from="@package_version@" to="version" type="package-info" />
+        </file>
+        <file name="New.flow" role="data">
+         <tasks:replace from="@package_version@" to="version" type="package-info" />
+        </file>
+       </dir> <!-- /web/webapp/config/flows/Entry -->
+      </dir> <!-- /web/webapp/config/flows -->
+      <dir name="orm">
+       <dir name="mappers">
+        <dir name="mysql">
+         <file name="Entry.yaml" role="data">
+          <tasks:replace from="@package_version@" to="version" type="package-info" />
+         </file>
+        </dir> <!-- /web/webapp/config/orm/mappers/mysql -->
+        <dir name="pgsql">
+         <file name="Entry.yaml" role="data">
+          <tasks:replace from="@package_version@" to="version" type="package-info" />
+         </file>
+        </dir> <!-- /web/webapp/config/orm/mappers/pgsql -->
+       </dir> <!-- /web/webapp/config/orm/mappers -->
+       <file name="piece-orm-config.yaml" role="data">
+        <tasks:replace from="@package_version@" to="version" type="package-info" />
+       </file>
+      </dir> <!-- /web/webapp/config/orm -->
+      <dir name="validations">
+       <dir name="Entry">
+        <file name="ID.yaml" role="data">
+         <tasks:replace from="@package_version@" to="version" type="package-info" />
+        </file>
+        <file name="New.yaml" role="data">
+         <tasks:replace from="@package_version@" to="version" type="package-info" />
+        </file>
+       </dir> <!-- /web/webapp/config/validations/Entry -->
+      </dir> <!-- /web/webapp/config/validations -->
+      <file name="piece-unity-config.yaml" role="data">
+       <tasks:replace from="@package_version@" to="version" type="package-info" />
+      </file>
+     </dir> <!-- /web/webapp/config -->
+     <dir name="lib">
+      <dir name="Piece">
+       <dir name="Examples">
+        <dir name="CRUD">
+         <file name="Configurator.php" role="data">
+          <tasks:replace from="@package_version@" to="version" type="package-info" />
+         </file>
+        </dir> <!-- /web/webapp/lib/Piece/Examples/CRUD -->
+       </dir> <!-- /web/webapp/lib/Piece/Examples -->
+      </dir> <!-- /web/webapp/lib/Piece -->
+     </dir> <!-- /web/webapp/lib -->
+     <dir name="sessions">
+      <file name="README" role="data">
+       <tasks:replace from="@package_version@" to="version" type="package-info" />
+      </file>
+     </dir> <!-- /web/webapp/sessions -->
+     <dir name="templates">
+      <dir name="Entry">
+       <dir name="Edit">
+        <file name="DeleteConfirmViaDisplayEdit.html" role="data">
+         <tasks:replace from="@package_version@" to="version" type="package-info" />
+        </file>
+        <file name="DeleteConfirmViaDisplayShow.html" role="data">
+         <tasks:replace from="@package_version@" to="version" type="package-info" />
+        </file>
+        <file name="Edit.html" role="data">
+         <tasks:replace from="@package_version@" to="version" type="package-info" />
+        </file>
+        <file name="EditConfirm.html" role="data">
+         <tasks:replace from="@package_version@" to="version" type="package-info" />
+        </file>
+        <file name="Error.html" role="data">
+         <tasks:replace from="@package_version@" to="version" type="package-info" />
+        </file>
+        <file name="Show.html" role="data">
+         <tasks:replace from="@package_version@" to="version" type="package-info" />
+        </file>
+       </dir> <!-- /web/webapp/templates/Entry/Edit -->
+       <dir name="List">
+        <file name="List.html" role="data">
+         <tasks:replace from="@package_version@" to="version" type="package-info" />
+        </file>
+       </dir> <!-- /web/webapp/templates/Entry/List -->
+       <dir name="New">
+        <file name="New.html" role="data">
+         <tasks:replace from="@package_version@" to="version" type="package-info" />
+        </file>
+        <file name="NewConfirm.html" role="data">
+         <tasks:replace from="@package_version@" to="version" type="package-info" />
+        </file>
+       </dir> <!-- /web/webapp/templates/Entry/New -->
+      </dir> <!-- /web/webapp/templates/Entry -->
+      <dir name="Layout">
+       <file name="Layout.html" role="data">
+        <tasks:replace from="@package_version@" to="version" type="package-info" />
+       </file>
+      </dir> <!-- /web/webapp/templates/Layout -->
+     </dir> <!-- /web/webapp/templates -->
+    </dir> <!-- /web/webapp -->
+   </dir> <!-- /web -->
+  </dir> <!-- / -->
+ </contents>
+ <dependencies>
+  <required>
+   <php>
+    <min>4.3.0</min>
+   </php>
+   <pearinstaller>
+    <min>1.4.3</min>
+   </pearinstaller>
+   <package>
+    <name>Piece_Unity</name>
+    <channel>pear.piece-framework.com</channel>
+    <min>1.4.0</min>
+   </package>
+   <package>
+    <name>Piece_Unity_Component_NullByteAttackPreventation</name>
+    <channel>pear.piece-framework.com</channel>
+    <min>1.0.0</min>
+   </package>
+   <package>
+    <name>Piece_Unity_Component_Flexy</name>
+    <channel>pear.piece-framework.com</channel>
+    <min>1.2.0</min>
+   </package>
+   <package>
+    <name>Piece_Unity_Component_PieceORM</name>
+    <channel>pear.piece-framework.com</channel>
+    <min>1.1.0</min>
+   </package>
+  </required>
+ </dependencies>
+ <phprelease />
+ <changelog>
+  <release>
+   <version>
+    <release>1.0.0</release>
+    <api>1.0.0</api>
+   </version>
+   <stability>
+    <release>stable</release>
+    <api>stable</api>
+   </stability>
+   <date>2007-11-25</date>
+   <license uri="http://www.opensource.org/licenses/bsd-license.php">BSD License (revised)</license>
+   <notes>The first release of Piece_Examples_CRUD.</notes>
+  </release>
+ </changelog>
+</package>
