@@ -60,7 +60,7 @@ $package->setOptions(array('filelistgenerator' => 'svn',
 $package->setPackage('Piece_Examples_CRUD');
 $package->setPackageType('php');
 $package->setSummary('A CRUD application with Piece_Unity and Piece_ORM');
-$package->setDescription('Piece_Examples_CRUD');
+$package->setDescription('Piece_Examples_CRUD is a CRUD application with Piece_Unity and Piece_ORM.');
 $package->setChannel('pear.piece-framework.com');
 $package->setLicense('BSD License (revised)', 'http://www.opensource.org/licenses/bsd-license.php');
 $package->setAPIVersion($apiVersion);
